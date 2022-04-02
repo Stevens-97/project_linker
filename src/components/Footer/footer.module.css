@@ -1,0 +1,22 @@
+.footerSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    margin: 0 auto;
+    width:60vw;
+    height: 10vh;
+    bottom: 0;
+    font-size: 1.5vw;
+}
+
+.logo{
+    align-self: center;
+    width: 15vw;
+    height: 5vh;
+}
+
+.copyRight{
+    display: flex;
+    align-self: center;
+}
