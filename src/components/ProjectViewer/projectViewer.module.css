@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 50vw;
 }
 .leftArrow,
 .rightArrow {
@@ -10,8 +11,25 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  align-self: center;
+  min-width: 2vw;
+  height: auto;
 }
 
 .wholeProjectSection {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  height: 70vh;
+  width: 70vw;
+}
+
+.exploreSection {
+  margin: 1rem;
+  background-color: rgb(196, 114, 14);
+  height: 20vh;
+  width: auto;
 }
