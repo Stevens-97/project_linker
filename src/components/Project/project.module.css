@@ -1,8 +1,10 @@
 .imageSection {
   width: 40vw;
   font-size: 1vw;
-  height: auto;
-
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   background-color: bisque;
 }
 
@@ -11,8 +13,26 @@
   height: 50vh;
   object-fit: cover;
   object-position: center;
+  align-self: center;
+}
+.imageActive {
+  width: 50vw;
+  height: 50vh;
 }
 
 .projectText {
   font-size: 1vw;
+}
+
+.leftArrow,
+.rightArrow {
+  font-size: 2vw;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  align-self: center;
+  min-width: 2vw;
+  height: auto;
+  align-self: flex-end;
 }
