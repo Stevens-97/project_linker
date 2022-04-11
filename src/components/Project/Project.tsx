@@ -59,8 +59,10 @@ export default function Project({ project, projectIndex }: projectLayout) {
           onClick={nextImage}
         />
       </div>
-      <div className={styles.textSection}>{project.projectTitle}</div>
-      <p className={styles.projectText}>{project.projectText}</p>
+      <div className={styles.textSection}>
+        {project.projectTitle}{" "}
+        <p className={styles.projectText}>{project.projectText}</p>
+      </div>
     </Fragment>
   );
 }

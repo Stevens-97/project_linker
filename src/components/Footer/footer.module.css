@@ -1,34 +1,34 @@
-.footerSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
-    margin: 0 auto;
-    width:60vw;
-    height: 10vh;
-    bottom: 0;
-    font-size: 1.5vw;
-    box-shadow:         inset 0px 11px 10px -15px rgba(0,0,0,.1);
-    flex-wrap: wrap;
-    /* background-color: yellow; */
-
+.footerSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  margin: 0 auto;
+  margin-top: 5vh;
+  width: 100vw;
+  height: 10vh;
+  bottom: 0;
+  font-size: 1.5vw;
+  box-shadow: inset 0px 11px 10px -15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  /* background-color: yellow; */
 }
 
-.logoSection{
-    /* background-color: aqua; */
-    height:5vh;
-    width: 20vh;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+.logoSection {
+  /* background-color: aqua; */
+  height: 5vh;
+  width: 20vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
-.logo{
-    align-self: center;
-    width: 100%;
-    height: auto;
+.logo {
+  align-self: center;
+  width: 100%;
+  height: auto;
 }
 
-.copyRight{
-    display: flex;
-    align-self: center;
+.copyRight {
+  display: flex;
+  align-self: center;
 }

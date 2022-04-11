@@ -22,14 +22,15 @@
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  background-color: aquamarine;
+  background-color: pink;
   height: 70vh;
   width: 70vw;
+  margin: 0 auto;
 }
 
 .exploreSection {
   margin: 1rem;
-  background-color: rgb(196, 114, 14);
-  height: 20vh;
-  width: auto;
+  background-color: yellow;
+
+  align-self: flex-start;
 }
