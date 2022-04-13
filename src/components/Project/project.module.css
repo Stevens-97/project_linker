@@ -1,23 +1,65 @@
 .imageSection {
   width: 20vw;
   font-size: 1vw;
-  height: 40vh;
+  height: 35vh;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   flex-direction: row;
   background-color: bisque;
+  padding: 1rem;
 }
 
 .image {
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   object-fit: cover;
   object-position: center;
   align-self: center;
   display: flex;
   align-items: center;
 }
+
+@media only screen and (max-width: 1200px) {
+  .image {
+    height: 30vh;
+  }
+  .imageSection {
+    width: 20vw;
+    font-size: 1vw;
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .image {
+    height: 25vh;
+  }
+  .imageSection {
+    width: 40vw;
+    font-size: 1vw;
+    height: 30vh;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .image {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .image {
+    height: 20vh;
+  }
+  .imageSection {
+    width: 40vw;
+    font-size: 1vw;
+    height: 25vh;
+  }
+}
+
 .imageActive {
   width: 50vw;
   height: 40vh;
@@ -42,5 +84,4 @@
   align-self: center;
   min-width: 2vw;
   height: auto;
-  align-self: flex-end;
 }

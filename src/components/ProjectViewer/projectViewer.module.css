@@ -34,3 +34,25 @@
 
   align-self: flex-start;
 }
+
+@media only screen and (max-width: 320px) {
+  /* Pass */
+}
+
+@media only screen and (max-width: 912px) {
+  .wholeProjectSection {
+    flex-wrap: wrap;
+  }
+  .exploreSection {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .exploreSection {
+    width: 100vw;
+  }
+  .projectSection {
+    margin: 0 auto;
+  }
+}
