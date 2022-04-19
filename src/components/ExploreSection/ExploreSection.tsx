@@ -13,10 +13,15 @@ interface projectLayout {
 
 interface setProjectDataFunc {
   setProjectData: (arg0: any) => void;
-  projectData: any;
+  setLength: (arg0: any) => void;
+  setCurrent: (arg0: any) => void;
 }
 
-export default function ExploreSection({ setProjectData }: setProjectDataFunc) {
+export default function ExploreSection({
+  setProjectData,
+  setLength,
+  setCurrent,
+}: setProjectDataFunc) {
   const [foundPosts, setFoundPosts] = useState(false);
   const [searchQuery, setSearchQuery] = useState();
   useEffect(() => {
@@ -30,6 +35,8 @@ export default function ExploreSection({ setProjectData }: setProjectDataFunc) {
           return postTags.includes(searchQuery);
         });
         console.log(filteredPosts);
+        setLength(filteredPosts.length);
+        setCurrent(0);
         setProjectData(filteredPosts);
         setFoundPosts(false);
       }

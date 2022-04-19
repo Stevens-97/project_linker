@@ -5,7 +5,7 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import ExploreSection from "../ExploreSection/ExploreSection";
 export default function ProjectViewer() {
   const [current, setCurrent] = useState(0);
-  const length = mockProjectData.length;
+  const [length, setLength] = useState(mockProjectData.length);
   const [projectData, setProjectData] = useState(mockProjectData);
   function nextProject() {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -25,7 +25,8 @@ export default function ProjectViewer() {
       <div className={styles.exploreSection}>
         <ExploreSection
           setProjectData={setProjectData}
-          projectData={projectData}
+          setLength={setLength}
+          setCurrent={setCurrent}
         />
       </div>
       <div className={styles.projectSection}>
