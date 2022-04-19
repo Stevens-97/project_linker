@@ -1,8 +1,36 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import styles from "./searchBar.module.css";
 import { AiOutlineSearch } from "react-icons/ai";
 
-export default function SearchBar() {
+interface searchQuery {
+  // query: [
+  //   projectId: number,
+  //   projectTitle: string,
+  //   projectText: string,
+  //   projectImages: string[],
+  //   projectTags: string[]
+  // ];
+  setSearchQuery: (arg1: any) => void;
+  setFoundPosts: (arg1: any) => void;
+}
+
+export default function SearchBar({
+  setSearchQuery,
+  setFoundPosts,
+}: searchQuery) {
+  const [inputText, setInputText] = useState("");
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    console.log("Entered handle submit");
+    setSearchQuery(inputText);
+    setFoundPosts(true);
+  }
+
+  function handleInput(e: FormEvent<HTMLInputElement>) {
+    console.log("Entered handle input", e.currentTarget.value);
+    setInputText(e.currentTarget.value);
+  }
+
   return (
     <div className={styles.wholeSearhBarSection}>
       <form className={styles.searchBarForm} action="/" method="get">
@@ -17,8 +45,17 @@ export default function SearchBar() {
           placeholder="Search for projects by tags"
           name="s"
           className={styles.formField}
+          onChange={(e) => {
+            handleInput(e);
+          }}
         />
-        <button type="submit" className={styles.submitButton}>
+        <button
+          type="submit"
+          className={styles.submitButton}
+          onClick={(e) => {
+            handleSubmit(e);
+          }}
+        >
           <AiOutlineSearch className={styles.submitButtonIcon} />
         </button>
       </form>
