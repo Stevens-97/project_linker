@@ -60,7 +60,7 @@ export default function Project({ project, projectIndex }: projectLayout) {
         />
       </div>
       <div className={styles.textSection}>
-        {project.projectTitle}{" "}
+        <p className={styles.projectTitle}>{project.projectTitle}</p>{" "}
         <p className={styles.projectText}>{project.projectText}</p>
       </div>
     </Fragment>

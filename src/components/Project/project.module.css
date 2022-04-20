@@ -20,6 +20,46 @@
   align-items: center;
 }
 
+.textSection,
+.projectText {
+  max-width: 25rem;
+  font-size: 2rem;
+}
+
+.projectTitle {
+  font-size: 2.5rem;
+}
+
+.projectText {
+  box-sizing: content-box;
+  font-size: 1.2rem;
+  height: 15rem;
+  overflow-y: scroll;
+  width: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  max-height: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  opacity: 0.1;
+}
+
 @media only screen and (max-width: 1200px) {
   .image {
     height: 30vh;
@@ -37,9 +77,19 @@
   }
   .imageSection {
     width: 40vw;
-    font-size: 1vw;
     height: 30vh;
     align-items: center;
+  }
+  .projectText {
+    box-sizing: content-box;
+    font-size: 1.2rem;
+    height: 10rem;
+  }
+  .textSection {
+    font-size: 0.5rem;
+  }
+  .projectTitle {
+    font-size: 1rem;
   }
 }
 
@@ -55,7 +105,6 @@
   }
   .imageSection {
     width: 40vw;
-    font-size: 1vw;
     height: 25vh;
   }
 }
@@ -63,10 +112,6 @@
 .imageActive {
   width: 50vw;
   height: 40vh;
-}
-
-.projectText {
-  font-size: 1vw;
 }
 
 .textSection {

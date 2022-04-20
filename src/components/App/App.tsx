@@ -6,9 +6,11 @@ import ProjectViewer from "../ProjectViewer/ProjectViewer";
 function App() {
   return (
     <Fragment>
-      <Navbar />
-      <ProjectViewer />
-      <Footer />
+      <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+        <Navbar />
+        <ProjectViewer />
+        <Footer />
+      </div>
     </Fragment>
   );
 }
