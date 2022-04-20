@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 
 interface projectLayout {
@@ -23,10 +23,11 @@ export default function ExploreSection({
   setCurrent,
 }: setProjectDataFunc) {
   const [foundPosts, setFoundPosts] = useState(false);
-  const [searchQuery, setSearchQuery] = useState();
+  const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
     console.log("Entered useEffect");
     function changePosts() {
+      console.log(searchQuery);
       if (foundPosts) {
         let filteredPosts = posts.filter((project: any) => {
           const postTags = project.projectTags.map((tag: any) =>
@@ -34,22 +35,80 @@ export default function ExploreSection({
           );
           return postTags.includes(searchQuery);
         });
-        console.log(filteredPosts);
-        setLength(filteredPosts.length);
-        setCurrent(0);
-        setProjectData(filteredPosts);
-        setFoundPosts(false);
+        if (filteredPosts.length > 0) {
+          console.log(filteredPosts);
+          setLength(filteredPosts.length);
+          setCurrent(0);
+          setProjectData(filteredPosts);
+          setFoundPosts(false);
+        } else if (filteredPosts.length === 0) {
+          console.log(filteredPosts);
+          setLength(posts.length);
+          setCurrent(0);
+          setProjectData(posts);
+          setFoundPosts(false);
+        }
       }
     }
     changePosts();
   }, [foundPosts]); // eslint-disable-line react-hooks/exhaustive-deps
-
+  function handleClick(e: FormEvent, label: string) {
+    console.log("Entered handle click");
+    e.preventDefault();
+    setSearchQuery(label);
+    setFoundPosts(true);
+  }
   return (
     <div>
       <SearchBar
         setSearchQuery={setSearchQuery}
         setFoundPosts={setFoundPosts}
       />
+      <div>
+        <h3>Popular tags</h3>
+        <h4>Cute stuff</h4>
+        <ul>
+          <li>
+            <button
+              onClick={(e) => {
+                handleClick(e, "cute");
+              }}
+            >
+              Cute
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={(e) => {
+                handleClick(e, "really cute");
+              }}
+            >
+              Really cute
+            </button>
+          </li>
+        </ul>
+        <h4>More Cute stuff</h4>
+        <ul>
+          <li>
+            <button
+              onClick={(e) => {
+                handleClick(e, "cute");
+              }}
+            >
+              Cute
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={(e) => {
+                handleClick(e, "really cute");
+              }}
+            >
+              Really cute
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
