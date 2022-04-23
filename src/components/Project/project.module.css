@@ -1,12 +1,12 @@
 .imageSection {
-  width: 20vw;
+  width: 40vw;
   font-size: 1vw;
   height: 35vh;
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  background-color: bisque;
+  background-color: #555;
   padding: 1rem;
 }
 
@@ -16,8 +16,13 @@
   object-fit: cover;
   object-position: center;
   align-self: center;
-  display: flex;
   align-items: center;
+  display: flex;
+}
+
+.imageActive {
+  display: flex;
+  margin: 0 auto;
 }
 
 .textSection,
@@ -130,7 +135,28 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
-  align-self: center;
   min-width: 2vw;
   height: auto;
+}
+
+.leftArrowDiv {
+  background-color: inherit;
+  border-radius: 5%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  margin-right: auto;
+  background-color: blue;
+}
+.rightArrowDiv {
+  background-color: inherit;
+  border-radius: 5%;
+  height: 100%;
+  display: flex;
+  margin-left: auto;
+  background-color: blue;
+}
+.leftArrowDiv:hover,
+.rightArrowDiv:hover {
+  background-color: rgba(38, 44, 44, 0.2);
 }

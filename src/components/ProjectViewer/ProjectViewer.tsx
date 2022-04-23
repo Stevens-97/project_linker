@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Project from "../Project/Project";
 import styles from "./projectViewer.module.css";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import {
+  MdOutlineArrowBackIosNew,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
 import ExploreSection from "../ExploreSection/ExploreSection";
 export default function ProjectViewer() {
   const [current, setCurrent] = useState(0);
@@ -30,10 +34,12 @@ export default function ProjectViewer() {
         />
       </div>
       <div className={styles.projectSection}>
-        <FaArrowAltCircleLeft
-          className={styles.leftArrow}
-          onClick={prevProject}
-        />
+        <div className={styles.ArrowDiv}>
+          <MdOutlineArrowBackIosNew
+            className={styles.leftArrow}
+            onClick={prevProject}
+          />
+        </div>
         {projectData.map((project, index) => {
           return (
             <div
@@ -47,10 +53,12 @@ export default function ProjectViewer() {
             </div>
           );
         })}
-        <FaArrowAltCircleRight
-          className={styles.rightArrow}
-          onClick={nextProject}
-        />
+        <div className={styles.ArrowDiv}>
+          <MdOutlineArrowForwardIos
+            className={styles.rightArrow}
+            onClick={nextProject}
+          />
+        </div>
       </div>
     </div>
   );

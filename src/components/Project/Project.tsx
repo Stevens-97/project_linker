@@ -35,10 +35,12 @@ export default function Project({ project, projectIndex }: projectLayout) {
   return (
     <Fragment>
       <div className={styles.imageSection}>
-        <FaArrowAltCircleLeft
-          className={styles.leftArrow}
-          onClick={prevImage}
-        />
+        <div className={styles.leftArrowDiv}>
+          <FaArrowAltCircleLeft
+            className={styles.leftArrow}
+            onClick={prevImage}
+          />
+        </div>
         {project.projectImages.map((image, index) => {
           return (
             <div
@@ -54,10 +56,12 @@ export default function Project({ project, projectIndex }: projectLayout) {
             </div>
           );
         })}
-        <FaArrowAltCircleRight
-          className={styles.rightArrow}
-          onClick={nextImage}
-        />
+        <div className={styles.rightArrowDiv}>
+          <FaArrowAltCircleRight
+            className={styles.rightArrow}
+            onClick={nextImage}
+          />
+        </div>
       </div>
       <div className={styles.textSection}>
         <p className={styles.projectTitle}>{project.projectTitle}</p>{" "}
