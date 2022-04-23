@@ -1,5 +1,7 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
+import styles from "./exploreSection.module.css";
+import { IoIosArrowUp } from "react-icons/io";
 
 interface projectLayout {
   projectLayout: [
@@ -24,6 +26,7 @@ export default function ExploreSection({
 }: setProjectDataFunc) {
   const [foundPosts, setFoundPosts] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [toggleTags, setToggleTags] = useState(true);
   useEffect(() => {
     console.log("Entered useEffect");
     function changePosts() {
@@ -58,57 +61,81 @@ export default function ExploreSection({
     setSearchQuery(label);
     setFoundPosts(true);
   }
+  function handleToggleClick() {
+    setToggleTags(!toggleTags);
+  }
+
   return (
-    <div>
-      <SearchBar
-        setSearchQuery={setSearchQuery}
-        setFoundPosts={setFoundPosts}
-      />
-      <div>
-        <h3>Popular tags</h3>
-        <h4>Cute stuff</h4>
-        <ul>
-          <li>
-            <button
-              onClick={(e) => {
-                handleClick(e, "cute");
-              }}
-            >
-              Cute
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={(e) => {
-                handleClick(e, "really cute");
-              }}
-            >
-              Really cute
-            </button>
-          </li>
-        </ul>
-        <h4>More Cute stuff</h4>
-        <ul>
-          <li>
-            <button
-              onClick={(e) => {
-                handleClick(e, "cute");
-              }}
-            >
-              Cute
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={(e) => {
-                handleClick(e, "really cute");
-              }}
-            >
-              Really cute
-            </button>
-          </li>
-        </ul>
-      </div>
+    <div className={styles.wholeExploreSection}>
+      <span className={styles.exploreSectionTop}>
+        <SearchBar
+          setSearchQuery={setSearchQuery}
+          setFoundPosts={setFoundPosts}
+        />
+        <div className={styles.exploreSectionToggleDiv}>
+          {toggleTags && (
+            <IoIosArrowUp
+              className={styles.exploreSectionToggleUp}
+              onClick={handleToggleClick}
+            />
+          )}
+          {!toggleTags && (
+            <IoIosArrowUp
+              className={styles.exploreSectionToggleDown}
+              onClick={handleToggleClick}
+            />
+          )}
+        </div>
+      </span>
+      {toggleTags === true && (
+        <div>
+          <div>
+            <h3>Popular tags</h3>
+          </div>
+          <h4>Cute stuff</h4>
+          <ul>
+            <li>
+              <button
+                onClick={(e) => {
+                  handleClick(e, "cute");
+                }}
+              >
+                Cute
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={(e) => {
+                  handleClick(e, "really cute");
+                }}
+              >
+                Really cute
+              </button>
+            </li>
+          </ul>
+          <h4>More Cute stuff</h4>
+          <ul>
+            <li>
+              <button
+                onClick={(e) => {
+                  handleClick(e, "cute");
+                }}
+              >
+                Cute
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={(e) => {
+                  handleClick(e, "really cute");
+                }}
+              >
+                Really cute
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

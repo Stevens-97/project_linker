@@ -1,1 +1,23 @@
+.exploreSectionTop {
+  display: flex;
+  flex-direction: row;
+}
 
+.exploreSectionToggleDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exploreSectionToggleUp {
+  transform: rotate(180deg);
+  transition: transform 1s linear;
+}
+.exploreSectionToggleDown {
+  transform: rotate(0deg);
+  transition: transform 1s linear;
+}
+
+.wholeExploreSection {
+  height: 19vh;
+}
