@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Project from "../Project/Project";
 import styles from "./projectViewer.module.css";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,

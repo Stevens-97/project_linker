@@ -1,13 +1,16 @@
+.project {
+  max-width: 50vw;
+}
+
 .imageSection {
-  width: 40vw;
+  width: 50vw;
   font-size: 1vw;
   height: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #555;
-  padding: 1rem;
+  background-color: rgb(47, 10, 10);
 }
 
 .image {
@@ -65,55 +68,6 @@
   opacity: 0.1;
 }
 
-@media only screen and (max-width: 1200px) {
-  .image {
-    height: 30vh;
-  }
-  .imageSection {
-    width: 20vw;
-    font-size: 1vw;
-    height: 35vh;
-  }
-}
-
-@media only screen and (max-width: 912px) {
-  .image {
-    height: 25vh;
-  }
-  .imageSection {
-    width: 40vw;
-    height: 30vh;
-    align-items: center;
-  }
-  .projectText {
-    box-sizing: content-box;
-    font-size: 1.2rem;
-    height: 10rem;
-  }
-  .textSection {
-    font-size: 0.5rem;
-  }
-  .projectTitle {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .image {
-    height: 20vh;
-  }
-}
-
-@media only screen and (max-width: 481px) {
-  .image {
-    height: 20vh;
-  }
-  .imageSection {
-    width: 40vw;
-    height: 25vh;
-  }
-}
-
 .imageActive {
   width: 50vw;
   height: 40vh;
@@ -160,7 +114,7 @@
 
 .projectSections {
   background-color: #555;
-  width: 20%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -184,4 +138,96 @@
   display: flex;
   flex-direction: row;
   justify-content: baseline;
+}
+
+@media only screen and (max-width: 1200px) {
+  .image {
+    height: 30vh;
+  }
+  .imageSection {
+    width: 20vw;
+    font-size: 1vw;
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  /* .image {
+    height: 25vh;
+  } */
+  .imageSection {
+    width: 95vw;
+    height: 30vh;
+    align-items: center;
+  }
+  .projectSections {
+    width: 25%;
+  }
+  .projectText {
+    box-sizing: content-box;
+    font-size: 1.2rem;
+    height: 10rem;
+  }
+  .textSection {
+    font-size: 0.5rem;
+    width: 75vw;
+  }
+  .projectTitle {
+    font-size: 1rem;
+  }
+  .infoSection {
+    width: 95vw;
+  }
+  .rightArrowDiv,
+  .leftArrowDiv,
+  .leftArrow,
+  .rightArrow {
+    width: 5vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .image {
+    height: 20vh;
+  }
+  .imageSection {
+    width: 90vw;
+    height: 25vh;
+  }
+
+  .textSection {
+    font-size: 0.5rem;
+    width: 75vw;
+  }
+  .projectSections {
+    width: 25%;
+  }
+  .infoSection {
+    width: 90vw;
+    /* margin: 0 auto; */
+  }
+  .rightArrowDiv,
+  .leftArrowDiv,
+  .leftArrow,
+  .rightArrow {
+    width: 5vw;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .imageSection {
+    width: 80vw;
+    height: 25vh;
+  }
+  .textSection {
+    font-size: 0.5rem;
+    width: 75%;
+  }
+  .projectSections {
+    width: 25%;
+  }
+  .infoSection {
+    width: 90vw;
+    /* margin: 0 auto; */
+  }
 }

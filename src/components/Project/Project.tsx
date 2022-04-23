@@ -1,5 +1,8 @@
 import React, { Fragment, useState } from "react";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import {
+  MdOutlineArrowBackIosNew,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
 import { BsCircleFill, BsCircle } from "react-icons/bs";
 import styles from "./project.module.css";
 
@@ -34,10 +37,10 @@ export default function Project({ project, projectIndex }: projectLayout) {
     return null;
   }
   return (
-    <Fragment>
+    <span className={styles.project}>
       <div className={styles.imageSection}>
         <div className={styles.leftArrowDiv}>
-          <FaArrowAltCircleLeft
+          <MdOutlineArrowBackIosNew
             className={styles.leftArrow}
             onClick={prevImage}
           />
@@ -58,7 +61,7 @@ export default function Project({ project, projectIndex }: projectLayout) {
           );
         })}
         <div className={styles.rightArrowDiv}>
-          <FaArrowAltCircleRight
+          <MdOutlineArrowForwardIos
             className={styles.rightArrow}
             onClick={nextImage}
           />
@@ -85,6 +88,6 @@ export default function Project({ project, projectIndex }: projectLayout) {
           <p className={styles.projectText}>{project.projectText}</p>
         </div>
       </span>
-    </Fragment>
+    </span>
   );
 }
