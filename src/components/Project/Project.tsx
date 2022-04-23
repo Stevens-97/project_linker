@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { BsCircleFill, BsCircle } from "react-icons/bs";
 import styles from "./project.module.css";
 
 interface projectLayout {
@@ -15,7 +16,7 @@ interface projectLayout {
 
 export default function Project({ project, projectIndex }: projectLayout) {
   const [current, setCurrent] = useState(0);
-  const length = project.projectImages.length;
+  const [length, setLength] = useState(project.projectImages.length);
 
   function nextImage() {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -63,10 +64,27 @@ export default function Project({ project, projectIndex }: projectLayout) {
           />
         </div>
       </div>
-      <div className={styles.textSection}>
-        <p className={styles.projectTitle}>{project.projectTitle}</p>{" "}
-        <p className={styles.projectText}>{project.projectText}</p>
-      </div>
+      <span className={styles.infoSection}>
+        <div className={styles.projectSections}>
+          <span className={styles.projectTab}>
+            <p className={styles.projectTabText}>About</p>
+          </span>
+          <span className={styles.projectTab}>
+            <p className={styles.projectTabText}>github</p>
+          </span>
+          <span className={styles.projectTab}>
+            <p className={styles.projectTabText}>twitter</p>
+          </span>
+          <span className={styles.projectTab}>
+            <p className={styles.projectTabText}>Site</p>
+          </span>
+          {/* <img src="https://i.lensdump.com/i/rl4SJA.png" alt="github logo"></img> */}
+        </div>
+        <div className={styles.textSection}>
+          <p className={styles.projectTitle}>{project.projectTitle}</p>{" "}
+          <p className={styles.projectText}>{project.projectText}</p>
+        </div>
+      </span>
     </Fragment>
   );
 }

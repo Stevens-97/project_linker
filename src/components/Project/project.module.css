@@ -20,19 +20,15 @@
   display: flex;
 }
 
-.imageActive {
-  display: flex;
-  margin: 0 auto;
-}
-
-.textSection,
 .projectText {
-  max-width: 25rem;
+  /* max-width: 25rem; */
   font-size: 2rem;
+  width: 40vw;
 }
 
 .textSection {
-  margin: 5rem 0;
+  /* margin: 5rem 0; */
+  width: 35vw;
 }
 
 .projectTitle {
@@ -124,8 +120,9 @@
 }
 
 .textSection {
-  height: 20vh;
-  width: 50vw;
+  height: auto;
+  margin-left: auto;
+  background-color: blue;
 }
 
 .leftArrow,
@@ -159,4 +156,32 @@
 .leftArrowDiv:hover,
 .rightArrowDiv:hover {
   background-color: rgba(38, 44, 44, 0.2);
+}
+
+.projectSections {
+  background-color: #555;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+  /* align-self: center; */
+}
+
+.projectTab {
+  height: 25%;
+  width: 100%;
+  /* margin-top: auto; */
+  border-bottom: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
 }
