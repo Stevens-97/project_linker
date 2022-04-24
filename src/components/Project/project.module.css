@@ -146,9 +146,13 @@
     height: 30vh;
   }
   .imageSection {
-    width: 20vw;
+    width: 55vw;
     font-size: 1vw;
     height: 35vh;
+  }
+  .textSection {
+    font-size: 0.5rem;
+    width: 50vw;
   }
 }
 
