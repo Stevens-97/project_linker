@@ -88,7 +88,7 @@ export default function ExploreSection({
         </div>
       </span>
       {toggleTags === true && (
-        <div>
+        <div className={styles.popularTags}>
           <div>
             <h3>Popular tags</h3>
           </div>

@@ -21,3 +21,9 @@
 .wholeExploreSection {
   height: 19vh;
 }
+
+.popularTags {
+  height: 25vh;
+  position: relative;
+  background-color: aliceblue;
+}

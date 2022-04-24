@@ -20,6 +20,9 @@ interface projectLayout {
 export default function Project({ project, projectIndex }: projectLayout) {
   const [current, setCurrent] = useState(0);
   const [length, setLength] = useState(project.projectImages.length);
+  const [aboutSection, setAboutSection] = useState(true);
+  const [githubSection, setGithubSection] = useState(false);
+  const [siteSection, setSiteSection] = useState(false);
 
   function nextImage() {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -36,6 +39,23 @@ export default function Project({ project, projectIndex }: projectLayout) {
   ) {
     return null;
   }
+
+  function toggleAboutSection() {
+    setGithubSection(false);
+    setAboutSection(true);
+    setSiteSection(false);
+  }
+  function toggleSiteSection() {
+    setGithubSection(false);
+    setAboutSection(false);
+    setSiteSection(true);
+  }
+  function toggleGithubSection() {
+    setGithubSection(true);
+    setAboutSection(false);
+    setSiteSection(false);
+  }
+
   return (
     <span className={styles.project}>
       <div className={styles.imageSection}>
@@ -69,23 +89,31 @@ export default function Project({ project, projectIndex }: projectLayout) {
       </div>
       <span className={styles.infoSection}>
         <div className={styles.projectSections}>
-          <span className={styles.projectTab}>
+          <span className={styles.projectTab} onClick={toggleAboutSection}>
             <p className={styles.projectTabText}>About</p>
           </span>
-          <span className={styles.projectTab}>
+          <span className={styles.projectTab} onClick={toggleGithubSection}>
             <p className={styles.projectTabText}>github</p>
           </span>
           <span className={styles.projectTab}>
             <p className={styles.projectTabText}>twitter</p>
           </span>
-          <span className={styles.projectTab}>
+          <span className={styles.projectTab} onClick={toggleSiteSection}>
             <p className={styles.projectTabText}>Site</p>
           </span>
           {/* <img src="https://i.lensdump.com/i/rl4SJA.png" alt="github logo"></img> */}
         </div>
         <div className={styles.textSection}>
           <p className={styles.projectTitle}>{project.projectTitle}</p>{" "}
-          <p className={styles.projectText}>{project.projectText}</p>
+          {aboutSection && (
+            <p className={styles.projectText}>{project.projectText}</p>
+          )}
+          {githubSection && (
+            <p className={styles.projectText}>
+              github images and links to repo here
+            </p>
+          )}
+          {siteSection && <p className={styles.projectText}>Site link here</p>}
         </div>
       </span>
     </span>
