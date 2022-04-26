@@ -55,7 +55,7 @@ input[type="text"]:focus {
 
 @media only screen and (max-width: 912px) {
   .searchBarForm {
-    width: 95vw;
+    width: 98vw;
   }
   .formField {
     width: 100%;
@@ -69,6 +69,6 @@ input[type="text"]:focus {
 }
 @media only screen and (max-width: 320px) {
   .searchBarForm {
-    width: 91vw;
+    width: 93vw;
   }
 }
