@@ -27,3 +27,21 @@
   position: relative;
   /* background-color: aliceblue; */
 }
+
+.tagTitle {
+  font-size: 2rem;
+}
+
+.tagButton {
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: none;
+  background: inherit;
+  height: 3vh;
+}
+
+.tagButton:active {
+  background-color: rgba(38, 44, 44, 0.2);
+  /* box-shadow: 0 5px rgb(148, 147, 147); */
+  transform: translateY(4px);
+}

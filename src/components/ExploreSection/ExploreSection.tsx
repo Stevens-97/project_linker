@@ -89,13 +89,11 @@ export default function ExploreSection({
       </span>
       {toggleTags === true && (
         <div className={styles.popularTags}>
-          <div>
-            <h3>Popular tags</h3>
-          </div>
-          <h4>Cute stuff</h4>
+          <h4 className={styles.tagTitle}>Cute stuff</h4>
           <ul>
             <li>
               <button
+                className={styles.tagButton}
                 onClick={(e) => {
                   handleClick(e, "cute");
                 }}
@@ -105,6 +103,7 @@ export default function ExploreSection({
             </li>
             <li>
               <button
+                className={styles.tagButton}
                 onClick={(e) => {
                   handleClick(e, "really cute");
                 }}
@@ -113,10 +112,11 @@ export default function ExploreSection({
               </button>
             </li>
           </ul>
-          <h4>More Cute stuff</h4>
+          <h4 className={styles.tagTitle}>More Cute stuff</h4>
           <ul>
             <li>
               <button
+                className={styles.tagButton}
                 onClick={(e) => {
                   handleClick(e, "cute");
                 }}
@@ -126,6 +126,7 @@ export default function ExploreSection({
             </li>
             <li>
               <button
+                className={styles.tagButton}
                 onClick={(e) => {
                   handleClick(e, "really cute");
                 }}
