@@ -41,9 +41,10 @@
 .projectText {
   box-sizing: content-box;
   font-size: 1.2rem;
-  height: 15rem;
+  height: 16.5rem;
   overflow-y: scroll;
   width: auto;
+  background-color: bisque;
 }
 
 /* width */
@@ -171,7 +172,7 @@
   .projectText {
     box-sizing: content-box;
     font-size: 1.2rem;
-    height: 10rem;
+    height: 18rem;
   }
   .textSection {
     font-size: 0.5rem;
