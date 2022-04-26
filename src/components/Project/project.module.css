@@ -168,6 +168,7 @@
   }
   .projectSections {
     width: 25%;
+    height: 38.1vh;
   }
   .projectText {
     box-sizing: content-box;
@@ -178,9 +179,9 @@
     font-size: 0.5rem;
     width: 75vw;
   }
-  .projectTitle {
-    font-size: 1rem;
-  }
+  /* .projectTitle {
+    font-size: 2.5rem;
+  } */
   .infoSection {
     width: 95vw;
   }
@@ -200,10 +201,13 @@
     width: 90vw;
     height: 25vh;
   }
-
+  .projectText {
+    height: 34vh;
+  }
   .textSection {
     font-size: 0.5rem;
     width: 75vw;
+    height: 38vh;
   }
   .projectSections {
     width: 25%;
@@ -217,6 +221,9 @@
   .leftArrow,
   .rightArrow {
     width: 5vw;
+  }
+  .projectTitle {
+    font-size: 2rem;
   }
 }
 
@@ -235,5 +242,11 @@
   .infoSection {
     width: 90vw;
     /* margin: 0 auto; */
+  }
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+  .projectText {
+    height: 35vh;
   }
 }
