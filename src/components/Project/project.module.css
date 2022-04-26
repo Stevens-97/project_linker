@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: rgb(47, 10, 10);
+  /* background-color: rgb(47, 10, 10); */
 }
 
 .image {
@@ -44,7 +44,7 @@
   height: 16.5rem;
   overflow-y: scroll;
   width: auto;
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 
 /* width */
@@ -78,7 +78,7 @@
   height: auto;
   width: 75%;
   margin-left: auto;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .leftArrow,
@@ -99,7 +99,7 @@
   display: flex;
   align-self: center;
   margin-right: auto;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .rightArrowDiv {
   background-color: inherit;
@@ -107,7 +107,7 @@
   height: 100%;
   display: flex;
   margin-left: auto;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .leftArrowDiv:hover,
 .rightArrowDiv:hover {
@@ -115,7 +115,7 @@
 }
 
 .projectSections {
-  background-color: #555;
+  /* background-color: #555; */
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -130,10 +130,25 @@
   height: 25%;
   width: 100%;
   /* margin-top: auto; */
-  border-bottom: solid;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  border-bottom: #555;
+}
+
+.projectTab:active {
+  background-color: rgb(56, 55, 55);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.projectTabText {
+  font-size: 2.5rem;
+}
+
+.projectTab:hover {
+  background-color: rgba(38, 44, 44, 0.2);
 }
 
 .infoSection {

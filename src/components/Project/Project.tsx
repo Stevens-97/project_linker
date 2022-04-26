@@ -93,11 +93,11 @@ export default function Project({ project, projectIndex }: projectLayout) {
             <p className={styles.projectTabText}>About</p>
           </span>
           <span className={styles.projectTab} onClick={toggleGithubSection}>
-            <p className={styles.projectTabText}>github</p>
+            <p className={styles.projectTabText}>Github</p>
           </span>
-          <span className={styles.projectTab}>
+          {/* <span className={styles.projectTab}>
             <p className={styles.projectTabText}>twitter</p>
-          </span>
+          </span> */}
           <span className={styles.projectTab} onClick={toggleSiteSection}>
             <p className={styles.projectTabText}>Site</p>
           </span>
@@ -110,7 +110,7 @@ export default function Project({ project, projectIndex }: projectLayout) {
           )}
           {githubSection && (
             <p className={styles.projectText}>
-              github images and links to repo here
+              Github images and links to repo here
             </p>
           )}
           {siteSection && <p className={styles.projectText}>Site link here</p>}

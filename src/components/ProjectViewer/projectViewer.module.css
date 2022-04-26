@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  background-color: rgb(232, 191, 142);
+  /* background-color: rgb(232, 191, 142); */
 }
 .leftArrow,
 .rightArrow {
@@ -32,11 +32,11 @@
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  background-color: rgb(154, 54, 70);
+  /* background-color: rgb(154, 54, 70); */
   height: 70vh;
   width: 70vw;
   margin: 0 auto;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .exploreSection {
